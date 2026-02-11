@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Us 🤍</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{
+  font-family:system-ui, sans-serif;
+  background:linear-gradient(135deg,#fdebd3,#f8d7c4);
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.slider{
+  width:100%;
+  max-width:380px;
+  background:#fff;
+  border-radius:24px;
+  overflow:hidden;
+  box-shadow:0 20px 40px rgba(0,0,0,.2);
+  position:relative;
+}
+
+/* Slides */
+.slides{
+  display:flex;
+  transition:transform .6s ease;
+}
+
+.slide{
+  min-width:100%;
+  padding:16px;
+  text-align:center;
+}
+
+.slide h2{
+  margin-bottom:12px;
+  font-size:20px;
+}
+
+/* Images grid */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:10px;
+}
+
+.grid img{
+  width:100%;
+  height:150px;
+  object-fit:cover;
+  border-radius:14px;
+}
+
+/* Controls */
+.controls{
+  display:flex;
+  justify-content:space-between;
+  padding:12px 16px;
+  background:#fff;
+}
+
+button{
+  border:none;
+  background:#ff8fa3;
+  color:white;
+  padding:10px 16px;
+  border-radius:20px;
+  font-size:14px;
+  cursor:pointer;
+}
+
+button:active{
+  transform:scale(.95);
+}
+
+/* Dots */
+.dots{
+  text-align:center;
+  padding-bottom:10px;
+}
+
+.dot{
+  display:inline-block;
+  width:8px;
+  height:8px;
+  margin:0 4px;
+  background:#ccc;
+  border-radius:50%;
+}
+
+.dot.active{
+  background:#ff8fa3;
+}
+</style>
+</head>
+
+<body>
+
+<div class="slider">
+
+  <div class="slides" id="slides">
+
+    <!-- Slide 1 -->
+    <div class="slide">
+      <h2>সব শুরু 🤍</h2>
+      <div class="grid">
+        <img src="images/A symbol of love.jpeg">
+        <img src="images/Gemini.jpeg">
+        <img src="images/Goofy uss.jpeg">
+        <img src="images/iu.jpeg">
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="slide">
+      <h2>আমরা 🫶</h2>
+      <div class="grid">
+        <img src="images/MADO.jpeg">
+        <img src="images/RIT.jpeg">
+        <img src="images/uss.jpeg">
+        <img src="images/Uss MADO.jpeg">
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="slide">
+      <h2>আমার গর্ব ❤️</h2>
+      <div class="grid">
+        <img src="images/Saraswati pujo.jpeg">
+        <img src="images/sona.jpeg">
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Controls -->
+  <div class="controls">
+    <button onclick="prev()">◀ Prev</button>
+    <button onclick="next()">Next ▶</button>
+  </div>
+
+  <!-- Dots -->
+  <div class="dots">
+    <span class="dot active"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+
+</div>
+
+<script>
+let index=0;
+const slides=document.getElementById("slides");
+const dots=document.querySelectorAll(".dot");
+
+function update(){
+  slides.style.transform=`translateX(-${index*100}%)`;
+  dots.forEach(d=>d.classList.remove("active"));
+  dots[index].classList.add("active");
+}
+
+function next(){
+  if(index<2){ index++; update(); }
+}
+
+function prev(){
+  if(index>0){ index--; update(); }
+}
+</script>
+
+</body>
+</html>
