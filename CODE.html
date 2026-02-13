@@ -3,164 +3,195 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy Valentine ❤️</title>
+<title>Our Love Story ❤️</title>
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif;}
+body{background:linear-gradient(135deg,#ffd6e0,#ffeaea);overflow:hidden;}
 
-body{
-background:linear-gradient(135deg,#ffd6e0,#ffeaea);
-overflow:hidden;
-}
-
-.slider{
-display:flex;
-width:100vw;
-height:100vh;
-transition:0.6s ease-in-out;
-}
-
+.slider{display:flex;width:100vw;height:100vh;transition:.7s ease;}
 .slide{
-min-width:100vw;
-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-padding:30px;
-text-align:center;
+min-width:100vw;height:100vh;
+display:flex;flex-direction:column;
+justify-content:center;align-items:center;
+text-align:center;padding:30px;
 }
 
-h1{font-size:38px;color:#d6336c;margin-bottom:15px;}
+h1{font-size:40px;color:#d6336c;margin-bottom:15px;}
 h2{color:#b03060;margin:15px 0;}
-p{color:#555;font-size:18px;margin-top:15px;}
+p{font-size:18px;color:#555;margin-top:10px;}
 
 .images{
-display:flex;
-gap:20px;
-flex-wrap:wrap;
-justify-content:center;
-align-items:center;
+display:flex;gap:20px;
+flex-wrap:wrap;justify-content:center;
 }
 
 .images img{
-width:320px;
-height:420px;
-object-fit:cover;
-border-radius:20px;
-box-shadow:0 10px 30px rgba(0,0,0,0.2);
-transition:0.4s;
+width:300px;height:420px;
+object-fit:cover;border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+transition:.4s;
 }
-
 .images img:hover{transform:scale(1.05);}
-
-.single img{
-width:380px;
-height:500px;
-}
+.single img{width:380px;height:500px;}
 
 .nav{
-position:absolute;
-bottom:40px;
-display:flex;
-gap:20px;
+position:absolute;bottom:40px;
+display:flex;gap:20px;
 }
 
 button{
-padding:12px 30px;
-border:none;
+padding:12px 30px;border:none;
 border-radius:30px;
-background:#ff6b81;
-color:white;
-font-size:16px;
-cursor:pointer;
+background:#ff6b81;color:#fff;
+font-size:16px;cursor:pointer;
 }
-
 button:hover{background:#e64980;}
 
 .dots{
-position:absolute;
-bottom:15px;
-display:flex;
-gap:8px;
+position:absolute;bottom:15px;
+display:flex;gap:6px;
 }
-
-.dot{
-width:10px;
-height:10px;
-border-radius:50%;
-background:#bbb;
-}
-
+.dot{width:9px;height:9px;border-radius:50%;background:#bbb;}
 .active{background:#ff6b81;}
 </style>
 </head>
-
 <body>
 
 <div class="slider" id="slider">
 
-<!-- Front Page -->
+<!-- 1 -->
 <div class="slide">
 <h1>Happy Valentine’s Day ❤️</h1>
-<h2>14 • 02 • 2026</h2>
-<p>তুমি আমার সবচেয়ে সুন্দর সিদ্ধান্ত।  
-আজকের দিনটা শুধু তোমার জন্য।</p>
+<p>আমাদের গল্পের প্রতিটা মুহূর্ত আজ সাজানো থাকুক এখানে।</p>
 </div>
 
-<!-- Slide 2 -->
+<!-- 2 -->
 <div class="slide">
 <h2>আমাদের শুরু 💫</h2>
 <div class="images">
 <img src="uss1.jpeg">
-<img src="WhatsApp%20Image%202026-02-11%20at%2012.52.16%20PM.jpeg">
 </div>
-<p>যেখান থেকে গল্পটা শুরু।</p>
 </div>
 
-<!-- Slide 3 -->
+<!-- 3 -->
 <div class="slide">
-<h2>একসাথে 🤍</h2>
+<h2>প্রথম হাসি</h2>
+<div class="images single">
+<img src="WhatsApp%20Image%202026-02-11%20at%2012.52.16%20PM.jpeg">
+</div>
+</div>
+
+<!-- 4 -->
+<div class="slide">
 <div class="images">
 <img src="WhatsApp%20Image%202026-02-11%20at%2012.52.17%20PM.jpeg">
 <img src="WhatsApp%20Image%202026-02-11%20at%2012.52.18%20PM.jpeg">
 </div>
-<p>হাত ছাড়বো না কখনও।</p>
+<p>দুইটা পাগল মানুষ 🤍</p>
 </div>
 
-<!-- Slide 4 -->
+<!-- 5 -->
 <div class="slide">
-<h2>তুমি মানেই আলো 🌸</h2>
 <div class="images single">
 <img src="WhatsApp%20Image%202026-02-11%20at%2012.52.19%20PM.jpeg">
 </div>
-<p>তোমার হাসিই আমার শান্তি।</p>
+<p>তুমি মানেই শান্তি</p>
 </div>
 
-<!-- Slide 5 -->
+<!-- 6 -->
 <div class="slide">
-<h2>আমাদের পাগলামি 😄</h2>
 <div class="images">
 <img src="WhatsApp%20Image%202026-02-11%20at%2012.52.20%20PM.jpeg">
 <img src="WhatsApp%20Image%202026-02-11%20at%2012.52.21%20PM.jpeg">
 </div>
-<p>হাসি, রাগ, অভিমান — সবই ভালোবাসা।</p>
+<p>হাসি থামেনি কখনও 😄</p>
 </div>
 
-<!-- Slide 6 -->
+<!-- 7 -->
 <div class="slide">
-<h2>চিরদিন ✨</h2>
 <div class="images single">
 <img src="WhatsApp%20Image%202026-02-11%20at%2012.52.23%20PM.jpeg">
 </div>
-<p>আজ, কাল, সবসময় — আমি তোমার।</p>
+<p>সবচেয়ে প্রিয় মুহূর্ত ✨</p>
+</div>
+
+<!-- 8 -->
+<div class="slide">
+<div class="images">
+<img src="uss1.jpeg">
+<img src="WhatsApp%20Image%202026-02-11%20at%2012.52.16%20PM.jpeg">
+</div>
+</div>
+
+<!-- 9 -->
+<div class="slide">
+<div class="images">
+<img src="WhatsApp%20Image%202026-02-11%20at%2012.52.17%20PM.jpeg">
+<img src="WhatsApp%20Image%202026-02-11%20at%2012.52.18%20PM.jpeg">
+</div>
+</div>
+
+<!-- 10 -->
+<div class="slide">
+<div class="images single">
+<img src="WhatsApp%20Image%202026-02-11%20at%2012.52.19%20PM.jpeg">
+</div>
+</div>
+
+<!-- 11 -->
+<div class="slide">
+<div class="images">
+<img src="WhatsApp%20Image%202026-02-11%20at%2012.52.20%20PM.jpeg">
+<img src="WhatsApp%20Image%202026-02-11%20at%2012.52.21%20PM.jpeg">
+</div>
+</div>
+
+<!-- 12 -->
+<div class="slide">
+<div class="images single">
+<img src="WhatsApp%20Image%202026-02-11%20at%2012.52.23%20PM.jpeg">
+</div>
+</div>
+
+<!-- 13 -->
+<div class="slide">
+<div class="images">
+<img src="uss1.jpeg">
+<img src="WhatsApp%20Image%202026-02-11%20at%2012.52.17%20PM.jpeg">
+</div>
+</div>
+
+<!-- 14 -->
+<div class="slide">
+<div class="images">
+<img src="WhatsApp%20Image%202026-02-11%20at%2012.52.18%20PM.jpeg">
+<img src="WhatsApp%20Image%202026-02-11%20at%2012.52.19%20PM.jpeg">
+</div>
+</div>
+
+<!-- 15 -->
+<div class="slide">
+<div class="images">
+<img src="WhatsApp%20Image%202026-02-11%20at%2012.52.20%20PM.jpeg">
+<img src="uss1.jpeg">
+</div>
+</div>
+
+<!-- 16 -->
+<div class="slide">
+<h2>চিরদিন ❤️</h2>
+<div class="images single">
+<img src="WhatsApp%20Image%202026-02-11%20at%2012.52.23%20PM.jpeg">
+</div>
+<p>আজ, কাল, সবসময় — আমরা।</p>
 </div>
 
 </div>
 
 <div class="nav">
-<button id="prev">◀ Prev</button>
-<button id="next">Next ▶</button>
+<button id="prev">◀</button>
+<button id="next">▶</button>
 </div>
 
 <div class="dots" id="dots"></div>
@@ -191,14 +222,6 @@ next.style.display=index===slides.length-1?"none":"inline-block";
 
 next.onclick=()=>{if(index<slides.length-1){index++;update();}}
 prev.onclick=()=>{if(index>0){index--;update();}}
-
-let startX=0;
-document.addEventListener("touchstart",e=>startX=e.touches[0].clientX);
-document.addEventListener("touchend",e=>{
-let endX=e.changedTouches[0].clientX;
-if(startX-endX>50 && index<slides.length-1){index++;update();}
-if(endX-startX>50 && index>0){index--;update();}
-});
 
 update();
 </script>
