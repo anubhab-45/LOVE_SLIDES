@@ -3,181 +3,202 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy Valentine's Day ❤️</title>
+<title>Happy Valentine ❤️</title>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif;}
 
 body{
-  font-family:'Segoe UI',sans-serif;
-  background:linear-gradient(135deg,#ffe6eb,#f8d7c4);
-  overflow:hidden;
+background:linear-gradient(135deg,#ffd6e0,#ffeaea);
+overflow:hidden;
 }
 
 .slider{
-  display:flex;
-  width:100%;
-  height:100vh;
-  transition:transform .8s ease;
+display:flex;
+width:100vw;
+height:100vh;
+transition:0.6s ease-in-out;
 }
 
-.page{
-  min-width:100%;
-  padding:40px 25px;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
+.slide{
+min-width:100vw;
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+padding:30px;
+text-align:center;
 }
 
-h1,h2{
-  margin-bottom:15px;
+h1{font-size:38px;color:#d6336c;margin-bottom:15px;}
+h2{color:#b03060;margin:15px 0;}
+p{color:#555;font-size:18px;margin-top:15px;}
+
+.images{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+justify-content:center;
+align-items:center;
 }
 
-p{
-  margin:10px 0 20px;
-  line-height:1.7;
-  font-size:17px;
+.images img{
+width:320px;
+height:420px;
+object-fit:cover;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,0.2);
+transition:0.4s;
 }
 
-img{
-  width:85%;
-  max-width:300px;
-  border-radius:18px;
-  margin:10px 0;
-  box-shadow:0 12px 25px rgba(0,0,0,.2);
-}
+.images img:hover{transform:scale(1.05);}
 
-.double{
-  display:flex;
-  gap:15px;
-  justify-content:center;
-}
-
-.double img{
-  width:45%;
+.single img{
+width:380px;
+height:500px;
 }
 
 .nav{
-  position:fixed;
-  bottom:20px;
-  width:100%;
-  display:flex;
-  justify-content:space-between;
-  padding:0 25px;
+position:absolute;
+bottom:40px;
+display:flex;
+gap:20px;
 }
 
 button{
-  border:none;
-  background:#ff4d6d;
-  color:white;
-  padding:10px 18px;
-  border-radius:25px;
-  font-size:14px;
-  cursor:pointer;
+padding:12px 30px;
+border:none;
+border-radius:30px;
+background:#ff6b81;
+color:white;
+font-size:16px;
+cursor:pointer;
 }
 
-button:active{transform:scale(.95)}
+button:hover{background:#e64980;}
 
-.hidden{visibility:hidden}
+.dots{
+position:absolute;
+bottom:15px;
+display:flex;
+gap:8px;
+}
+
+.dot{
+width:10px;
+height:10px;
+border-radius:50%;
+background:#bbb;
+}
+
+.active{background:#ff6b81;}
 </style>
 </head>
+
 <body>
 
 <div class="slider" id="slider">
 
-<!-- 1️⃣ FRONT PAGE -->
-<div class="page">
-  <h1>Happy Valentine’s Day 💖</h1>
-  <h2>১৪ ফেব্রুয়ারি ২০২৬</h2>
-  <p>
-    আমার সোনামণি,<br>
-    আজকের এই দিনটা শুধু ভালোবাসার নয়,<br>
-    আমাদের গল্পেরও একটা সুন্দর অধ্যায়।
-  </p>
+<!-- Front Page -->
+<div class="slide">
+<h1>Happy Valentine’s Day ❤️</h1>
+<h2>14 • 02 • 2026</h2>
+<p>তুমি আমার সবচেয়ে সুন্দর সিদ্ধান্ত।  
+আজকের দিনটা শুধু তোমার জন্য।</p>
 </div>
 
-<!-- 2️⃣ TWO IMAGES -->
-<div class="page">
-  <h2>আমাদের শুরু ✨</h2>
-  <div class="double">
-    <img src="A symbol of love.jpg">
-    <img src="Gemini.jpg">
-  </div>
-  <p>সেদিন থেকেই বুঝেছিলাম, কিছু একটা বিশেষ শুরু হয়েছে।</p>
+<!-- Slide 2 -->
+<div class="slide">
+<h2>আমাদের শুরু 💫</h2>
+<div class="images">
+<img src="uss1.jpeg">
+<img src="WhatsApp%20Image%202026-02-11%20at%2012.52.16%20PM.jpeg">
+</div>
+<p>যেখান থেকে গল্পটা শুরু।</p>
 </div>
 
-<!-- 3️⃣ SINGLE -->
-<div class="page">
-  <h2>তোমার হাসি 🤍</h2>
-  <img src="sona.jpg">
-  <p>তুমি হাসলে আমার পৃথিবীটা হালকা হয়ে যায়।</p>
+<!-- Slide 3 -->
+<div class="slide">
+<h2>একসাথে 🤍</h2>
+<div class="images">
+<img src="WhatsApp%20Image%202026-02-11%20at%2012.52.17%20PM.jpeg">
+<img src="WhatsApp%20Image%202026-02-11%20at%2012.52.18%20PM.jpeg">
+</div>
+<p>হাত ছাড়বো না কখনও।</p>
 </div>
 
-<!-- 4️⃣ SINGLE -->
-<div class="page">
-  <h2>আমাদের পাগলামি 😄</h2>
-  <img src="Goofy uss.jpg">
-  <p>এইসব ছোট ছোট মুহূর্তই আমার সবচেয়ে বড় সুখ।</p>
+<!-- Slide 4 -->
+<div class="slide">
+<h2>তুমি মানেই আলো 🌸</h2>
+<div class="images single">
+<img src="WhatsApp%20Image%202026-02-11%20at%2012.52.19%20PM.jpeg">
+</div>
+<p>তোমার হাসিই আমার শান্তি।</p>
 </div>
 
-<!-- 5️⃣ TWO IMAGES -->
-<div class="page">
-  <h2>একসাথে পথচলা 🫶</h2>
-  <div class="double">
-    <img src="MADO.jpg">
-    <img src="RIT.jpg">
-  </div>
-  <p>তুমি পাশে থাকলে সবকিছু সহজ লাগে।</p>
+<!-- Slide 5 -->
+<div class="slide">
+<h2>আমাদের পাগলামি 😄</h2>
+<div class="images">
+<img src="WhatsApp%20Image%202026-02-11%20at%2012.52.20%20PM.jpeg">
+<img src="WhatsApp%20Image%202026-02-11%20at%2012.52.21%20PM.jpeg">
+</div>
+<p>হাসি, রাগ, অভিমান — সবই ভালোবাসা।</p>
 </div>
 
-<!-- 6️⃣ SINGLE -->
-<div class="page">
-  <h2>আমার গর্ব ❤️</h2>
-  <img src="Saraswati pujo.jpg">
-  <p>তোমাকে নিয়ে আমি সবসময় গর্বিত।</p>
+<!-- Slide 6 -->
+<div class="slide">
+<h2>চিরদিন ✨</h2>
+<div class="images single">
+<img src="WhatsApp%20Image%202026-02-11%20at%2012.52.23%20PM.jpeg">
 </div>
-
-<!-- 7️⃣ FINAL PAGE -->
-<div class="page">
-  <h2>Forever & Always 💍</h2>
-  <img src="uss.jpg">
-  <p>
-    আজ, আগামীকাল, আর সব ভবিষ্যৎ দিনগুলোতে,<br>
-    আমি চাই শুধু তুমি থাকো আমার পাশে।<br><br>
-    তুমি আমার ভালোবাসা,<br>
-    তুমি আমার ঘর।
-  </p>
+<p>আজ, কাল, সবসময় — আমি তোমার।</p>
 </div>
 
 </div>
 
 <div class="nav">
-  <button onclick="prev()" id="prevBtn">◀ আগেরটা</button>
-  <button onclick="next()" id="nextBtn">পরেরটা ▶</button>
+<button id="prev">◀ Prev</button>
+<button id="next">Next ▶</button>
 </div>
 
+<div class="dots" id="dots"></div>
+
 <script>
-let index=0;
 const slider=document.getElementById("slider");
-const total=7;
-const prevBtn=document.getElementById("prevBtn");
-const nextBtn=document.getElementById("nextBtn");
+const slides=document.querySelectorAll(".slide");
+const prev=document.getElementById("prev");
+const next=document.getElementById("next");
+const dotsContainer=document.getElementById("dots");
+
+let index=0;
+
+slides.forEach((_,i)=>{
+let dot=document.createElement("div");
+dot.classList.add("dot");
+if(i===0) dot.classList.add("active");
+dotsContainer.appendChild(dot);
+});
 
 function update(){
-  slider.style.transform=`translateX(-${index*100}%)`;
-  prevBtn.classList.toggle("hidden", index===0);
-  nextBtn.classList.toggle("hidden", index===total-1);
+slider.style.transform=`translateX(-${index*100}vw)`;
+document.querySelectorAll(".dot").forEach(d=>d.classList.remove("active"));
+document.querySelectorAll(".dot")[index].classList.add("active");
+prev.style.display=index===0?"none":"inline-block";
+next.style.display=index===slides.length-1?"none":"inline-block";
 }
 
-function next(){
-  if(index<total-1){index++;update();}
-}
+next.onclick=()=>{if(index<slides.length-1){index++;update();}}
+prev.onclick=()=>{if(index>0){index--;update();}}
 
-function prev(){
-  if(index>0){index--;update();}
-}
+let startX=0;
+document.addEventListener("touchstart",e=>startX=e.touches[0].clientX);
+document.addEventListener("touchend",e=>{
+let endX=e.changedTouches[0].clientX;
+if(startX-endX>50 && index<slides.length-1){index++;update();}
+if(endX-startX>50 && index>0){index--;update();}
+});
 
 update();
 </script>
