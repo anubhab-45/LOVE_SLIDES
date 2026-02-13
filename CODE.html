@@ -3,28 +3,27 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For You 🤍</title>
+<title>Happy Valentine's Day ❤️</title>
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 
 body{
-  font-family: 'Segoe UI', sans-serif;
-  background:linear-gradient(135deg,#fdebd3,#f8d7c4);
+  font-family:'Segoe UI',sans-serif;
+  background:linear-gradient(135deg,#ffe6eb,#f8d7c4);
   overflow:hidden;
 }
 
-.container{
+.slider{
+  display:flex;
   width:100%;
   height:100vh;
-  display:flex;
-  transition:transform .7s ease;
+  transition:transform .8s ease;
 }
 
 .page{
   min-width:100%;
-  height:100vh;
-  padding:30px 20px;
+  padding:40px 25px;
   display:flex;
   flex-direction:column;
   justify-content:center;
@@ -32,133 +31,144 @@ body{
   text-align:center;
 }
 
-/* Cover Page */
-.cover h1{
-  font-size:28px;
+h1,h2{
   margin-bottom:15px;
 }
 
-.cover p{
-  font-size:16px;
-  margin-bottom:25px;
-  line-height:1.6;
-}
-
-button{
-  border:none;
-  background:#ff8fa3;
-  color:#fff;
-  padding:12px 24px;
-  border-radius:25px;
-  font-size:16px;
-  cursor:pointer;
-}
-
-button:active{transform:scale(.95)}
-
-/* Photo Grid */
-.grid{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:12px;
-  margin-top:20px;
-}
-
-.grid img{
-  width:100%;
-  height:170px;
-  object-fit:cover;
-  border-radius:16px;
-  box-shadow:0 10px 20px rgba(0,0,0,.15);
-}
-
-/* Final Page */
-.final h2{
-  font-size:24px;
-  margin-bottom:15px;
-}
-
-.final p{
+p{
+  margin:10px 0 20px;
+  line-height:1.7;
   font-size:17px;
-  line-height:1.8;
-  max-width:320px;
+}
+
+img{
+  width:85%;
+  max-width:300px;
+  border-radius:18px;
+  margin:10px 0;
+  box-shadow:0 12px 25px rgba(0,0,0,.2);
+}
+
+.double{
+  display:flex;
+  gap:15px;
+  justify-content:center;
+}
+
+.double img{
+  width:45%;
 }
 
 .nav{
-  position:absolute;
+  position:fixed;
   bottom:20px;
   width:100%;
   display:flex;
   justify-content:space-between;
   padding:0 25px;
 }
+
+button{
+  border:none;
+  background:#ff4d6d;
+  color:white;
+  padding:10px 18px;
+  border-radius:25px;
+  font-size:14px;
+  cursor:pointer;
+}
+
+button:active{transform:scale(.95)}
+
+.hidden{visibility:hidden}
 </style>
 </head>
-
 <body>
 
-<div class="container" id="slider">
+<div class="slider" id="slider">
 
-  <!-- 1️⃣ FRONT PAGE -->
-  <div class="page cover">
-    <h1>তোমার জন্য 🤍</h1>
-    <p>
-      আমাদের গল্পের ছোট্ট কিছু মুহূর্ত,<br>
-      কিছু হাসি, কিছু পাগলামি,<br>
-      আর অনেকটা ভালোবাসা...
-    </p>
-    <button onclick="next()">শুরু করি ➜</button>
-  </div>
+<!-- 1️⃣ FRONT PAGE -->
+<div class="page">
+  <h1>Happy Valentine’s Day 💖</h1>
+  <h2>১৪ ফেব্রুয়ারি ২০২৬</h2>
+  <p>
+    আমার সোনামণি,<br>
+    আজকের এই দিনটা শুধু ভালোবাসার নয়,<br>
+    আমাদের গল্পেরও একটা সুন্দর অধ্যায়।
+  </p>
+</div>
 
-  <!-- 2️⃣ PHOTO PAGE 1 -->
-  <div class="page">
-    <h2>সব শুরু এখান থেকে ✨</h2>
-    <div class="grid">
-      <img src="A symbol of love.jpg">
-      <img src="Gemini.jpg">
-      <img src="Goofy uss.jpg">
-      <img src="iu.jpg">
-    </div>
+<!-- 2️⃣ TWO IMAGES -->
+<div class="page">
+  <h2>আমাদের শুরু ✨</h2>
+  <div class="double">
+    <img src="A symbol of love.jpg">
+    <img src="Gemini.jpg">
   </div>
+  <p>সেদিন থেকেই বুঝেছিলাম, কিছু একটা বিশেষ শুরু হয়েছে।</p>
+</div>
 
-  <!-- 3️⃣ PHOTO PAGE 2 -->
-  <div class="page">
-    <h2>আমরা, শুধু আমরা 🫶</h2>
-    <div class="grid">
-      <img src="MADO.jpg">
-      <img src="RIT.jpg">
-      <img src="uss.jpg">
-      <img src="Uss MADO.jpg">
-    </div>
-  </div>
+<!-- 3️⃣ SINGLE -->
+<div class="page">
+  <h2>তোমার হাসি 🤍</h2>
+  <img src="sona.jpg">
+  <p>তুমি হাসলে আমার পৃথিবীটা হালকা হয়ে যায়।</p>
+</div>
 
-  <!-- 4️⃣ FINAL GREETING -->
-  <div class="page final">
-    <h2>তুমি আমার সব ❤️</h2>
-    <p>
-      প্রতিটা ছবির পেছনে আছে একটা স্মৃতি,<br>
-      প্রতিটা স্মৃতির ভেতরে আছে তুমি।<br><br>
-      তুমি পাশে থাকলে পৃথিবীটা সহজ লাগে,<br>
-      তুমি হাসলে দিনটা সুন্দর হয়।<br><br>
-      আজ, আগামীকাল, সবসময় —<br>
-      আমি চাই শুধু তুমি থাকো আমার সাথে।
-    </p>
+<!-- 4️⃣ SINGLE -->
+<div class="page">
+  <h2>আমাদের পাগলামি 😄</h2>
+  <img src="Goofy uss.jpg">
+  <p>এইসব ছোট ছোট মুহূর্তই আমার সবচেয়ে বড় সুখ।</p>
+</div>
+
+<!-- 5️⃣ TWO IMAGES -->
+<div class="page">
+  <h2>একসাথে পথচলা 🫶</h2>
+  <div class="double">
+    <img src="MADO.jpg">
+    <img src="RIT.jpg">
   </div>
+  <p>তুমি পাশে থাকলে সবকিছু সহজ লাগে।</p>
+</div>
+
+<!-- 6️⃣ SINGLE -->
+<div class="page">
+  <h2>আমার গর্ব ❤️</h2>
+  <img src="Saraswati pujo.jpg">
+  <p>তোমাকে নিয়ে আমি সবসময় গর্বিত।</p>
+</div>
+
+<!-- 7️⃣ FINAL PAGE -->
+<div class="page">
+  <h2>Forever & Always 💍</h2>
+  <img src="uss.jpg">
+  <p>
+    আজ, আগামীকাল, আর সব ভবিষ্যৎ দিনগুলোতে,<br>
+    আমি চাই শুধু তুমি থাকো আমার পাশে।<br><br>
+    তুমি আমার ভালোবাসা,<br>
+    তুমি আমার ঘর।
+  </p>
+</div>
 
 </div>
 
 <div class="nav">
-  <button onclick="prev()">◀ আগেরটা</button>
-  <button onclick="next()">পরেরটা ▶</button>
+  <button onclick="prev()" id="prevBtn">◀ আগেরটা</button>
+  <button onclick="next()" id="nextBtn">পরেরটা ▶</button>
 </div>
 
 <script>
 let index=0;
 const slider=document.getElementById("slider");
-const total=4;
+const total=7;
+const prevBtn=document.getElementById("prevBtn");
+const nextBtn=document.getElementById("nextBtn");
 
 function update(){
   slider.style.transform=`translateX(-${index*100}%)`;
+  prevBtn.classList.toggle("hidden", index===0);
+  nextBtn.classList.toggle("hidden", index===total-1);
 }
 
 function next(){
@@ -168,6 +178,8 @@ function next(){
 function prev(){
   if(index>0){index--;update();}
 }
+
+update();
 </script>
 
 </body>
