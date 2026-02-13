@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,48 +16,64 @@
 body{
   background:#111;
   color:white;
+  height:100dvh;
   display:flex;
   justify-content:center;
   align-items:center;
-  height:100vh;
+  padding:15px;
 }
 
 .slider{
-  width:95%;
-  max-width:500px;
+  width:100%;
+  max-width:420px;
+  background:#1c1c1c;
+  border-radius:15px;
+  padding:20px;
   text-align:center;
-  position:relative;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
 }
 
 .slide{
   display:none;
-  padding:30px 20px;
-  font-size:22px;
-  line-height:1.5;
 }
 
 .slide.active{
   display:block;
 }
 
+.slide img{
+  width:100%;
+  border-radius:12px;
+  margin-bottom:15px;
+}
+
+.text{
+  font-size:18px;
+  line-height:1.5;
+}
+
 .buttons{
   margin-top:20px;
   display:flex;
   justify-content:space-between;
+  gap:15px;
 }
 
 button{
-  padding:10px 20px;
+  flex:1;
+  padding:12px;
   font-size:16px;
   border:none;
-  border-radius:8px;
+  border-radius:10px;
   cursor:pointer;
   background:#ff4d6d;
   color:white;
 }
 
 button:disabled{
-  background:gray;
+  background:#555;
 }
 </style>
 </head>
@@ -66,10 +82,36 @@ button:disabled{
 
 <div class="slider">
 
-  <div class="slide active">❤️ তুমি আমার জীবনের সবচেয়ে সুন্দর অংশ।</div>
-  <div class="slide">🌸 তোমার হাসি আমার দিনের শুরু।</div>
-  <div class="slide">💫 আমি সবসময় তোমার পাশে থাকবো।</div>
-  <div class="slide">💖 তুমি আমার forever.</div>
+  <!-- Greeting -->
+  <div class="slide active">
+    <div class="text">❤️ Happy Valentine’s Day ❤️<br>তুমি আমার জীবনের সবচেয়ে সুন্দর অংশ।</div>
+  </div>
+
+  <!-- Images -->
+  <div class="slide"><img src="A symbol of love.jpg"><div class="text">তোমার সাথে প্রতিটা মুহূর্ত special 💖</div></div>
+  <div class="slide"><img src="Gemini.jpg"><div class="text">তোমার হাসি আমার শক্তি 🌸</div></div>
+  <div class="slide"><img src="Goofy uss.jpg"><div class="text">আমাদের silly মুহূর্তগুলো আমার favourite 😘</div></div>
+  <div class="slide"><img src="MADO.jpg"><div class="text">তুমি আমার forever 💫</div></div>
+  <div class="slide"><img src="RIT.jpg"><div class="text">তোমার সাথে জীবনটাই সুন্দর 🌹</div></div>
+  <div class="slide"><img src="Saraswati pujo.jpg"><div class="text">তোমাকে পাশে পেলেই শান্তি পাই ✨</div></div>
+  <div class="slide"><img src="Uss MADO.jpg"><div class="text">আমাদের storyটা best 📖❤️</div></div>
+  <div class="slide"><img src="iu.jpg"><div class="text">তুমি আমার inspiration 💕</div></div>
+  <div class="slide"><img src="sona.jpg"><div class="text">তুমি আমার sona 🥰</div></div>
+  <div class="slide"><img src="uss.jpg"><div class="text">তুমি আর আমি — perfect 💑</div></div>
+  <div class="slide"><img src="uss1.jpeg"><div class="text">চিরদিন পাশে থেকো 💍</div></div>
+  <div class="slide"><img src="ভালোবাসা.jpeg"><div class="text">ভালোবাসা মানেই তুমি ❤️</div></div>
+
+  <div class="slide"><img src="WhatsApp Image 2026-02-11 at 12.52.16 PM.jpeg"><div class="text">Our memories 🥹</div></div>
+  <div class="slide"><img src="WhatsApp Image 2026-02-11 at 12.52.17 PM.jpeg"><div class="text">আরো হাজার ছবি তুলবো 📸</div></div>
+  <div class="slide"><img src="WhatsApp Image 2026-02-11 at 12.52.18 PM.jpeg"><div class="text">সবসময় একসাথে 💖</div></div>
+  <div class="slide"><img src="WhatsApp Image 2026-02-11 at 12.52.19 PM.jpeg"><div class="text">তোমাকে ছাড়া কিছু না 🥺</div></div>
+  <div class="slide"><img src="WhatsApp Image 2026-02-11 at 12.52.20 PM.jpeg"><div class="text">My favourite person 🌎</div></div>
+  <div class="slide"><img src="WhatsApp Image 2026-02-11 at 12.52.21 PM.jpeg"><div class="text">Always & Forever 💍</div></div>
+  <div class="slide"><img src="WhatsApp Image 2026-02-11 at 12.52.23 PM.jpeg"><div class="text">শেষ পর্যন্ত আমরা ❤️</div></div>
+  <div class="slide"><img src="WhatsApp Image 2026-02-11 at 12.52.24 PM.jpeg"><div class="text">তুমি আমার সব 🌹</div></div>
+  <div class="slide"><img src="WhatsApp Image 2026-02-11 at 12.52.25 PM.jpeg"><div class="text">Never letting you go 🤍</div></div>
+  <div class="slide"><img src="WhatsApp Image 2026-02-11 at 12.52.26 PM.jpeg"><div class="text">Together forever ✨</div></div>
+  <div class="slide"><img src="WhatsApp Image 2026-02-11 at 12.52.27 PM.jpeg"><div class="text">I love you endlessly ❤️</div></div>
 
   <div class="buttons">
     <button id="prev">Previous</button>
@@ -79,7 +121,7 @@ button:disabled{
 </div>
 
 <script>
-let slides = document.querySelectorAll(".slide");
+const slides = document.querySelectorAll(".slide");
 let current = 0;
 
 const prevBtn = document.getElementById("prev");
