@@ -10,41 +10,47 @@
 body{
 background:linear-gradient(135deg,#ffdde1,#ee9ca7);
 overflow:hidden;
-color:white;
+color:#fff;
 }
 
 .slider{
-position:relative;
+display:flex;
 width:100vw;
 height:100vh;
+transition:.8s ease;
 }
 
 .slide{
-position:absolute;
-width:100%;
-height:100%;
+min-width:100vw;
+height:100vh;
 display:flex;
+flex-direction:column;
 justify-content:center;
 align-items:center;
-flex-direction:column;
-opacity:0;
-transition:1.2s ease;
-}
-
-.slide.active{
-opacity:1;
+text-align:center;
+padding:30px;
 }
 
 .slide img{
-max-width:85%;
-max-height:75%;
+max-width:40%;
+max-height:60%;
 border-radius:20px;
-box-shadow:0 20px 50px rgba(0,0,0,0.4);
+box-shadow:0 15px 40px rgba(0,0,0,0.4);
+margin:10px;
 }
 
-h1,h2{
-margin-bottom:20px;
-text-shadow:0 4px 15px rgba(0,0,0,0.5);
+.images{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+h1{font-size:42px;margin-bottom:20px;}
+p{
+margin-top:20px;
+font-size:18px;
+max-width:700px;
+line-height:1.6;
 }
 
 .nav{
@@ -67,100 +73,174 @@ cursor:pointer;
 }
 
 button:hover{background:#ff1e56;}
-
-.heart{
-position:absolute;
-width:15px;
-height:15px;
-background:red;
-transform:rotate(45deg);
-animation:float 8s infinite;
-opacity:.6;
-}
-.heart:before,.heart:after{
-content:'';
-position:absolute;
-width:15px;height:15px;
-background:red;
-border-radius:50%;
-}
-.heart:before{top:-8px;left:0;}
-.heart:after{left:-8px;top:0;}
-
-@keyframes float{
-0%{transform:translateY(100vh) rotate(45deg);}
-100%{transform:translateY(-10vh) rotate(45deg);}
-}
 </style>
 </head>
+
 <body>
 
-<div class="slider">
+<div class="slider" id="slider">
 
-<!-- 1 -->
-<div class="slide active"><h1>Happy Valentine’s Day ❤️</h1></div>
+<!-- 1 GREETING -->
+<div class="slide">
+<h1>Happy Valentine’s Day ❤️</h1>
+<p>
+আজকের এই ছোট্ট ওয়েবসাইটটা শুধু তোমার জন্য।  
+প্রতিটা ছবি একটা স্মৃতি,  
+আর প্রতিটা স্মৃতি মানেই তুমি।
+</p>
+</div>
 
-<!-- All 22 Images -->
+<!-- 2 -->
+<div class="slide">
+<div class="images">
+<img src="A%20symbol%20of%20love.jpg">
+</div>
+<p>ভালোবাসার প্রতীক তুমি, আর আমার সব অনুভূতির কেন্দ্রও তুমি।</p>
+</div>
 
-<div class="slide"><img src="A%20symbol%20of%20love.jpg"></div>
-<div class="slide"><img src="Gemini.jpg"></div>
-<div class="slide"><img src="Goofy%20uss.jpg"></div>
-<div class="slide"><img src="MADO.jpg"></div>
-<div class="slide"><img src="RIT.jpg"></div>
-<div class="slide"><img src="Saraswati%20pujo.jpg"></div>
-<div class="slide"><img src="Uss%20MADO.jpg"></div>
-<div class="slide"><img src="iu.jpg"></div>
-<div class="slide"><img src="sona.jpg"></div>
-<div class="slide"><img src="uss.jpg"></div>
-<div class="slide"><img src="uss1.jpeg"></div>
-<div class="slide"><img src="%E0%A6%AD%E0%A6%BE%E0%A6%B2%E0%A7%8B%E0%A6%AC%E0%A6%BE%E0%A6%B8%E0%A6%BE.jpeg"></div>
+<!-- 3 -->
+<div class="slide">
+<div class="images">
+<img src="Gemini.jpg">
+<img src="Goofy%20uss.jpg">
+</div>
+<p>আমাদের পাগলামিগুলোই আমাদের সবচেয়ে সুন্দর অংশ।</p>
+</div>
 
-<div class="slide"><img src="WhatsApp%20Image%202026-02-11%20at%2012.52.16%20PM.jpeg"></div>
-<div class="slide"><img src="WhatsApp%20Image%202026-02-11%20at%2012.52.17%20PM.jpeg"></div>
-<div class="slide"><img src="WhatsApp%20Image%202026-02-11%20at%2012.52.18%20PM.jpeg"></div>
-<div class="slide"><img src="WhatsApp%20Image%202026-02-11%20at%2012.52.19%20PM.jpeg"></div>
-<div class="slide"><img src="WhatsApp%20Image%202026-02-11%20at%2012.52.20%20PM.jpeg"></div>
-<div class="slide"><img src="WhatsApp%20Image%202026-02-11%20at%2012.52.21%20PM.jpeg"></div>
-<div class="slide"><img src="WhatsApp%20Image%202026-02-11%20at%2012.52.23%20PM.jpeg"></div>
-<div class="slide"><img src="WhatsApp%20Image%202026-02-11%20at%2012.52.24%20PM.jpeg"></div>
-<div class="slide"><img src="WhatsApp%20Image%202026-02-11%20at%2012.52.25%20PM.jpeg"></div>
-<div class="slide"><img src="WhatsApp%20Image%202026-02-11%20at%2012.52.26%20PM.jpeg"></div>
-<div class="slide"><img src="WhatsApp%20Image%202026-02-11%20at%2012.52.27%20PM.jpeg"></div>
+<!-- 4 -->
+<div class="slide">
+<div class="images">
+<img src="MADO.jpg">
+</div>
+<p>তোমার চোখে তাকালেই পৃথিবীটা থেমে যায়।</p>
+</div>
+
+<!-- 5 -->
+<div class="slide">
+<div class="images">
+<img src="RIT.jpg">
+<img src="Saraswati%20pujo.jpg">
+</div>
+<p>পূজোর ভিড়েও তোমাকেই খুঁজে নিই বারবার।</p>
+</div>
+
+<!-- 6 -->
+<div class="slide">
+<div class="images">
+<img src="Uss%20MADO.jpg">
+</div>
+<p>তুমি পাশে থাকলেই সবকিছু সহজ হয়ে যায়।</p>
+</div>
+
+<!-- 7 -->
+<div class="slide">
+<div class="images">
+<img src="iu.jpg">
+<img src="sona.jpg">
+</div>
+<p>আমাদের হাসিগুলো চিরদিন এমনই থাকুক।</p>
+</div>
+
+<!-- 8 -->
+<div class="slide">
+<div class="images">
+<img src="uss.jpg">
+</div>
+<p>তুমি মানেই আমার ঘর।</p>
+</div>
+
+<!-- 9 -->
+<div class="slide">
+<div class="images">
+<img src="uss1.jpeg">
+<img src="%E0%A6%AD%E0%A6%BE%E0%A6%B2%E0%A7%8B%E0%A6%AC%E0%A6%BE%E0%A6%B8%E0%A6%BE.jpeg">
+</div>
+<p>ভালোবাসা মানে তুমি, শুধু তুমি।</p>
+</div>
+
+<!-- WhatsApp Slides -->
+
+<div class="slide">
+<div class="images">
+<img src="WhatsApp%20Image%202026-02-11%20at%2012.52.16%20PM.jpeg">
+</div>
+<p>এই মুহূর্তটা আজও স্পেশাল।</p>
+</div>
+
+<div class="slide">
+<div class="images">
+<img src="WhatsApp%20Image%202026-02-11%20at%2012.52.17%20PM.jpeg">
+<img src="WhatsApp%20Image%202026-02-11%20at%2012.52.18%20PM.jpeg">
+</div>
+<p>একসাথে থাকাটাই আসল সুখ।</p>
+</div>
+
+<div class="slide">
+<div class="images">
+<img src="WhatsApp%20Image%202026-02-11%20at%2012.52.19%20PM.jpeg">
+</div>
+<p>তোমার হাসি আমার শক্তি।</p>
+</div>
+
+<div class="slide">
+<div class="images">
+<img src="WhatsApp%20Image%202026-02-11%20at%2012.52.20%20PM.jpeg">
+<img src="WhatsApp%20Image%202026-02-11%20at%2012.52.21%20PM.jpeg">
+</div>
+<p>আমাদের গল্পটা যেন কখনও শেষ না হয়।</p>
+</div>
+
+<div class="slide">
+<div class="images">
+<img src="WhatsApp%20Image%202026-02-11%20at%2012.52.23%20PM.jpeg">
+</div>
+<p>চিরদিন তোমার হাতটাই ধরে থাকতে চাই।</p>
+</div>
+
+<div class="slide">
+<div class="images">
+<img src="WhatsApp%20Image%202026-02-11%20at%2012.52.24%20PM.jpeg">
+<img src="WhatsApp%20Image%202026-02-11%20at%2012.52.25%20PM.jpeg">
+</div>
+<p>তুমি থাকলেই জীবনটা পূর্ণ।</p>
+</div>
+
+<div class="slide">
+<div class="images">
+<img src="WhatsApp%20Image%202026-02-11%20at%2012.52.26%20PM.jpeg">
+</div>
+<p>আজ, কাল, সবসময় — আমরা।</p>
+</div>
+
+<div class="slide">
+<div class="images">
+<img src="WhatsApp%20Image%202026-02-11%20at%2012.52.27%20PM.jpeg">
+</div>
+<p>শেষ নয়, এটা শুধু আমাদের শুরুর গল্প। ❤️</p>
+</div>
 
 </div>
 
 <div class="nav">
-<button onclick="prevSlide()">◀</button>
-<button onclick="nextSlide()">▶</button>
+<button onclick="prev()">◀ Prev</button>
+<button onclick="next()">Next ▶</button>
 </div>
 
 <script>
-let slides=document.querySelectorAll('.slide');
+const slider=document.getElementById("slider");
+const slides=document.querySelectorAll(".slide");
 let index=0;
 
-function showSlide(i){
-slides.forEach(s=>s.classList.remove('active'));
-slides[i].classList.add('active');
+function update(){
+slider.style.transform=`translateX(-${index*100}vw)`;
 }
 
-function nextSlide(){
-index=(index+1)%slides.length;
-showSlide(index);
-}
-function prevSlide(){
-index=(index-1+slides.length)%slides.length;
-showSlide(index);
+function next(){
+if(index<slides.length-1){index++;update();}
 }
 
-setInterval(nextSlide,4000);
-
-// floating hearts
-for(let i=0;i<25;i++){
-let heart=document.createElement('div');
-heart.className='heart';
-heart.style.left=Math.random()*100+'vw';
-heart.style.animationDuration=(5+Math.random()*5)+'s';
-document.body.appendChild(heart);
+function prev(){
+if(index>0){index--;update();}
 }
 </script>
 
