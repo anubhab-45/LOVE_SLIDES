@@ -27,7 +27,6 @@ body{
   position:relative;
 }
 
-/* Slides */
 .slides{
   display:flex;
   transition:transform .6s ease;
@@ -44,7 +43,6 @@ body{
   font-size:20px;
 }
 
-/* Images grid */
 .grid{
   display:grid;
   grid-template-columns:repeat(2,1fr);
@@ -53,7 +51,7 @@ body{
 
 .grid img{
   width:100%;
-  height:150px;
+  height:160px;
   object-fit:cover;
   border-radius:14px;
 }
@@ -63,7 +61,6 @@ body{
   display:flex;
   justify-content:space-between;
   padding:12px 16px;
-  background:#fff;
 }
 
 button{
@@ -80,7 +77,6 @@ button:active{
   transform:scale(.95);
 }
 
-/* Dots */
 .dots{
   text-align:center;
   padding-bottom:10px;
@@ -111,10 +107,10 @@ button:active{
     <div class="slide">
       <h2>সব শুরু 🤍</h2>
       <div class="grid">
-        <img src="images/A symbol of love.jpg">
-        <img src="images/Gemini.jpg">
-        <img src="images/Goofy uss.jpg">
-        <img src="images/iu.jpg">
+        <img src="A symbol of love.jpg">
+        <img src="Gemini.jpg">
+        <img src="Goofy uss.jpg">
+        <img src="iu.jpg">
       </div>
     </div>
 
@@ -122,10 +118,10 @@ button:active{
     <div class="slide">
       <h2>আমরা 🫶</h2>
       <div class="grid">
-        <img src="images/MADO.jpg">
-        <img src="images/RIT.jpg">
-        <img src="images/uss.jpg">
-        <img src="images/Uss MADO.jpg">
+        <img src="MADO.jpg">
+        <img src="RIT.jpg">
+        <img src="uss.jpg">
+        <img src="Uss MADO.jpg">
       </div>
     </div>
 
@@ -133,20 +129,18 @@ button:active{
     <div class="slide">
       <h2>আমার গর্ব ❤️</h2>
       <div class="grid">
-        <img src="images/Saraswati pujo.jpg">
-        <img src="images/sona.jpg">
+        <img src="Saraswati pujo.jpg">
+        <img src="sona.jpg">
       </div>
     </div>
 
   </div>
 
-  <!-- Controls -->
   <div class="controls">
     <button onclick="prev()">◀ Prev</button>
     <button onclick="next()">Next ▶</button>
   </div>
 
-  <!-- Dots -->
   <div class="dots">
     <span class="dot active"></span>
     <span class="dot"></span>
@@ -177,4 +171,3 @@ function prev(){
 
 </body>
 </html>
-
