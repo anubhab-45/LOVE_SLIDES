@@ -3,26 +3,25 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Our Love Story ❤️</title>
+<title>Our Love Story</title>
 
 <style>
 body{
 margin:0;
 font-family:Arial, sans-serif;
-background:linear-gradient(135deg,#ffdde1,#ee9ca7);
+background:#ffdde1;
 overflow:hidden;
-color:white;
 }
 
 .slider{
 display:flex;
-width:100vw;
+width:100%;
 height:100vh;
-transition:0.6s ease;
+transition:transform 0.6s ease;
 }
 
 .slide{
-min-width:100vw;
+min-width:100%;
 height:100vh;
 display:flex;
 flex-direction:column;
@@ -34,23 +33,31 @@ padding:20px;
 
 .images{
 display:flex;
+gap:20px;
 flex-wrap:wrap;
 justify-content:center;
-gap:15px;
 }
 
-.slide img{
+img{
 max-width:45%;
-max-height:60%;
-border-radius:15px;
-box-shadow:0 10px 25px rgba(0,0,0,0.4);
+max-height:60vh;
+border-radius:12px;
+box-shadow:0 10px 25px rgba(0,0,0,0.3);
 }
 
-h1{margin-bottom:20px;}
-p{max-width:600px;margin-top:15px;font-size:18px;}
+h1{
+font-size:36px;
+margin-bottom:20px;
+}
+
+p{
+max-width:600px;
+margin-top:15px;
+font-size:18px;
+}
 
 .nav{
-position:absolute;
+position:fixed;
 bottom:30px;
 width:100%;
 display:flex;
@@ -60,16 +67,16 @@ gap:20px;
 
 button{
 padding:10px 20px;
+font-size:16px;
 border:none;
-border-radius:25px;
+border-radius:20px;
 background:#ff4b6e;
 color:white;
-font-size:16px;
 cursor:pointer;
 }
 
 button:hover{
-background:#ff1e56;
+background:#e6004c;
 }
 </style>
 </head>
@@ -78,13 +85,13 @@ background:#ff1e56;
 
 <div class="slider" id="slider">
 
-<!-- Greeting -->
+<!-- 1 Greeting -->
 <div class="slide">
-<h1>Happy Valentine’s Day ❤️</h1>
-<p>প্রতিটা ছবি একটা স্মৃতি। আর প্রতিটা স্মৃতি মানেই তুমি।</p>
+<h1>Happy Valentine's Day ❤️</h1>
+<p>এই ওয়েবসাইটটা শুধু তোমার জন্য। প্রতিটা ছবি একটা স্মৃতি, আর প্রতিটা স্মৃতি মানেই তুমি।</p>
 </div>
 
-<!-- Slide 2 -->
+<!-- 2 -->
 <div class="slide">
 <div class="images">
 <img src="A symbol of love.jpg">
@@ -92,84 +99,100 @@ background:#ff1e56;
 <p>তুমি আমার ভালোবাসার প্রতীক।</p>
 </div>
 
-<!-- Slide 3 -->
+<!-- 3 -->
 <div class="slide">
 <div class="images">
 <img src="Gemini.jpg">
 <img src="Goofy uss.jpg">
 </div>
-<p>আমাদের পাগলামিই আমাদের সৌন্দর্য।</p>
+<p>আমাদের পাগলামিগুলোই সবচেয়ে সুন্দর।</p>
 </div>
 
-<!-- Slide 4 -->
+<!-- 4 -->
 <div class="slide">
 <div class="images">
 <img src="MADO.jpg">
-<img src="RIT.jpg">
 </div>
-<p>তুমি থাকলেই পৃথিবীটা সুন্দর।</p>
+<p>তোমার চোখে তাকালেই পৃথিবীটা বদলে যায়।</p>
 </div>
 
-<!-- Slide 5 -->
+<!-- 5 -->
 <div class="slide">
 <div class="images">
+<img src="RIT.jpg">
 <img src="Saraswati pujo.jpg">
 </div>
 <p>ভিড়ের মধ্যেও শুধু তোমাকেই দেখি।</p>
 </div>
 
-<!-- Slide 6 -->
+<!-- 6 -->
 <div class="slide">
 <div class="images">
 <img src="Uss MADO.jpg">
-<img src="iu.jpg">
 </div>
-<p>তুমি আমার শান্তি।</p>
+<p>তুমি পাশে থাকলেই সব সহজ।</p>
 </div>
 
-<!-- Slide 7 -->
+<!-- 7 -->
 <div class="slide">
 <div class="images">
+<img src="iu.jpg">
 <img src="sona.jpg">
-<img src="uss.jpg">
 </div>
-<p>আমাদের হাসি চিরদিন থাকুক।</p>
+<p>আমাদের হাসি যেন এমনই থাকে।</p>
 </div>
 
-<!-- Slide 8 -->
+<!-- 8 -->
+<div class="slide">
+<div class="images">
+<img src="uss.jpg">
+</div>
+<p>তুমি মানেই আমার ঘর।</p>
+</div>
+
+<!-- 9 -->
 <div class="slide">
 <div class="images">
 <img src="uss1.jpeg">
-<img src="ভালোবাসা.jpeg">
 </div>
-<p>ভালোবাসা মানেই তুমি।</p>
+<p>এই মুহূর্তটা চিরদিন মনে থাকবে।</p>
 </div>
 
-<!-- WhatsApp Images -->
+<!-- 10 -->
 <div class="slide">
 <div class="images">
 <img src="WhatsApp Image 2026-02-11 at 12.52.16 PM.jpeg">
 <img src="WhatsApp Image 2026-02-11 at 12.52.17 PM.jpeg">
 </div>
-<p>এই মুহূর্তগুলো অমূল্য।</p>
+<p>একসাথে থাকাটাই সুখ।</p>
 </div>
 
+<!-- 11 -->
 <div class="slide">
 <div class="images">
 <img src="WhatsApp Image 2026-02-11 at 12.52.18 PM.jpeg">
-<img src="WhatsApp Image 2026-02-11 at 12.52.19 PM.jpeg">
 </div>
-<p>তোমার হাসিই আমার শক্তি।</p>
+<p>তোমার হাসি আমার শক্তি।</p>
 </div>
 
+<!-- 12 -->
 <div class="slide">
 <div class="images">
+<img src="WhatsApp Image 2026-02-11 at 12.52.19 PM.jpeg">
 <img src="WhatsApp Image 2026-02-11 at 12.52.20 PM.jpeg">
-<img src="WhatsApp Image 2026-02-11 at 12.52.21 PM.jpeg">
 </div>
 <p>আমরা এমনই থাকবো সবসময়।</p>
 </div>
 
+<!-- 13 -->
+<div class="slide">
+<div class="images">
+<img src="WhatsApp Image 2026-02-11 at 12.52.21 PM.jpeg">
+</div>
+<p>প্রতিটা মুহূর্ত অমূল্য।</p>
+</div>
+
+<!-- 14 -->
 <div class="slide">
 <div class="images">
 <img src="WhatsApp Image 2026-02-11 at 12.52.23 PM.jpeg">
@@ -178,16 +201,18 @@ background:#ff1e56;
 <p>একসাথে পথ চলাই আসল সুখ।</p>
 </div>
 
+<!-- 15 -->
 <div class="slide">
 <div class="images">
 <img src="WhatsApp Image 2026-02-11 at 12.52.25 PM.jpeg">
-<img src="WhatsApp Image 2026-02-11 at 12.52.26 PM.jpeg">
 </div>
 <p>আজ, কাল, সবসময় — আমরা।</p>
 </div>
 
+<!-- 16 -->
 <div class="slide">
 <div class="images">
+<img src="WhatsApp Image 2026-02-11 at 12.52.26 PM.jpeg">
 <img src="WhatsApp Image 2026-02-11 at 12.52.27 PM.jpeg">
 </div>
 <p>এই গল্পের শেষ নেই। ❤️</p>
@@ -201,20 +226,26 @@ background:#ff1e56;
 </div>
 
 <script>
-let index=0;
-const slider=document.getElementById("slider");
-const slides=document.querySelectorAll(".slide");
+let index = 0;
+const slider = document.getElementById("slider");
+const slides = document.querySelectorAll(".slide");
 
-function update(){
-slider.style.transform=`translateX(-${index*100}vw)`;
+function updateSlide(){
+slider.style.transform = "translateX(-" + (index * 100) + "%)";
 }
 
 function next(){
-if(index<slides.length-1){index++;update();}
+if(index < slides.length - 1){
+index++;
+updateSlide();
+}
 }
 
 function prev(){
-if(index>0){index--;update();}
+if(index > 0){
+index--;
+updateSlide();
+}
 }
 </script>
 
