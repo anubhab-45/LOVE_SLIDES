@@ -1,223 +1,113 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Our Love Story ❤️</title>
+<title>Love Slides</title>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif;}
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: Arial, sans-serif;
+}
+
 body{
-  background:linear-gradient(135deg,#ffe6eb,#fff7f5);
-  overflow-x:hidden;
-  color:#333;
-}
-.slider{
+  background:#111;
+  color:white;
   display:flex;
-  width:100vw;
-  height:100vh;
-  transition:0.6s ease;
-}
-.slide{
-  min-width:100vw;
-  height:100vh;
-  display:flex;
-  flex-direction:column;
   justify-content:center;
   align-items:center;
-  padding:20px;
+  height:100vh;
+}
+
+.slider{
+  width:95%;
+  max-width:500px;
   text-align:center;
+  position:relative;
 }
-.images{
+
+.slide{
+  display:none;
+  padding:30px 20px;
+  font-size:22px;
+  line-height:1.5;
+}
+
+.slide.active{
+  display:block;
+}
+
+.buttons{
+  margin-top:20px;
   display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:15px;
+  justify-content:space-between;
 }
-img{
-  max-width:45%;
-  height:auto;
-  border-radius:14px;
-  box-shadow:0 8px 30px rgba(0,0,0,0.25);
-  margin:10px;
-}
-h1{font-size:34px;color:#d6336c;margin-bottom:12px;}
-p{font-size:18px;line-height:1.6;max-width:700px;margin-top:10px;}
-.nav{
-  position:fixed;
-  bottom:25px;
-  width:100%;
-  display:flex;
-  justify-content:center;
-  gap:24px;
-}
+
 button{
-  padding:10px 22px;
-  border:none;
-  border-radius:24px;
-  background:#ff4b6e;
-  color:white;
+  padding:10px 20px;
   font-size:16px;
+  border:none;
+  border-radius:8px;
   cursor:pointer;
+  background:#ff4d6d;
+  color:white;
 }
-button:hover{background:#e6004c;}
+
+button:disabled{
+  background:gray;
+}
 </style>
 </head>
 
 <body>
 
-<div class="slider" id="slider">
+<div class="slider">
 
-<!-- Greeting -->
-<div class="slide">
-<h1>Happy Valentine’s Day ❤️</h1>
-<p>এই ওয়েবসাইটটা শুধু তোমার জন্য।  
-প্রতিটা ছবি একটা স্মৃতি,  
-আর প্রতিটা স্মৃতি মানেই তুমি।</p>
-</div>
+  <div class="slide active">❤️ তুমি আমার জীবনের সবচেয়ে সুন্দর অংশ।</div>
+  <div class="slide">🌸 তোমার হাসি আমার দিনের শুরু।</div>
+  <div class="slide">💫 আমি সবসময় তোমার পাশে থাকবো।</div>
+  <div class="slide">💖 তুমি আমার forever.</div>
 
-<!-- 2 -->
-<div class="slide">
-<div class="images"><img src="A symbol of love.jpg"></div>
-<p>তুমি আমার ভালোবাসার প্রতীক।</p>
-</div>
+  <div class="buttons">
+    <button id="prev">Previous</button>
+    <button id="next">Next</button>
+  </div>
 
-<!-- 3 -->
-<div class="slide">
-<div class="images">
-<img src="Gemini.jpg">
-<img src="Goofy uss.jpg">
-</div>
-<p>আমাদের পাগলামিগুলোই সবচেয়ে সুন্দর।</p>
-</div>
-
-<!-- 4 -->
-<div class="slide">
-<div class="images"><img src="MADO.jpg"></div>
-<p>তোমার চোখে তাকালেই মন হাসে।</p>
-</div>
-
-<!-- 5 -->
-<div class="slide">
-<div class="images">
-<img src="RIT.jpg">
-<img src="Saraswati pujo.jpg">
-</div>
-<p>ভিড়ের মধ্যেও শুধু তোমাকেই খুঁজে পাই বারবার।</p>
-</div>
-
-<!-- 6 -->
-<div class="slide">
-<div class="images"><img src="Uss MADO.jpg"></div>
-<p>তুমি পাশে থাকলেই সব সহজ।</p>
-</div>
-
-<!-- 7 -->
-<div class="slide">
-<div class="images">
-<img src="iu.jpg">
-<img src="sona.jpg">
-</div>
-<p>আমাদের হাসি যেন এমনই থাকে।</p>
-</div>
-
-<!-- 8 -->
-<div class="slide">
-<div class="images"><img src="uss.jpg"></div>
-<p>তুমি আমার শান্তি।</p>
-</div>
-
-<!-- 9 -->
-<div class="slide">
-<div class="images">
-<img src="uss1.jpeg">
-<img src="ভালোবাসা.jpeg">
-</div>
-<p>ভালোবাসা মানে তুমি।</p>
-</div>
-
-<!-- 10 -->
-<div class="slide">
-<div class="images">
-<img src="WhatsApp Image 2026-02-11 at 12.52.16 PM.jpeg">
-<img src="WhatsApp Image 2026-02-11 at 12.52.17 PM.jpeg">
-</div>
-<p>এই মুহূর্তগুলো আজও মনে থাকে।</p>
-</div>
-
-<!-- 11 -->
-<div class="slide">
-<div class="images">
-<img src="WhatsApp Image 2026-02-11 at 12.52.18 PM.jpeg">
-<img src="WhatsApp Image 2026-02-11 at 12.52.19 PM.jpeg">
-</div>
-<p>তোমার হাসিই আমার শক্তি।</p>
-</div>
-
-<!-- 12 -->
-<div class="slide">
-<div class="images">
-<img src="WhatsApp Image 2026-02-11 at 12.52.20 PM.jpeg">
-<img src="WhatsApp Image 2026-02-11 at 12.52.21 PM.jpeg">
-</div>
-<p>আমরা এমনই থাকবো সবসময়।</p>
-</div>
-
-<!-- 13 -->
-<div class="slide">
-<div class="images">
-<img src="WhatsApp Image 2026-02-11 at 12.52.23 PM.jpeg">
-<img src="WhatsApp Image 2026-02-11 at 12.52.24 PM.jpeg">
-</div>
-<p>একসাথে পথ চলাই আসল সুখ।</p>
-</div>
-
-<!-- 14 -->
-<div class="slide">
-<div class="images">
-<img src="WhatsApp Image 2026-02-11 at 12.52.25 PM.jpeg">
-<img src="WhatsApp Image 2026-02-11 at 12.52.26 PM.jpeg">
-</div>
-<p>আজ, কাল, সবসময় — আমরা।</p>
-</div>
-
-<!-- 15 -->
-<div class="slide">
-<div class="images">
-<img src="WhatsApp Image 2026-02-11 at 12.52.27 PM.jpeg">
-</div>
-<p>এই গল্পের শেষ নেই। ❤️</p>
-</div>
-
-</div>
-
-<div class="nav">
-<button onclick="prev()">◀ Prev</button>
-<button onclick="next()">Next ▶</button>
 </div>
 
 <script>
-let index = 0;
-const slides = document.querySelectorAll(".slide");
-const slider = document.getElementById("slider");
+let slides = document.querySelectorAll(".slide");
+let current = 0;
+
+const prevBtn = document.getElementById("prev");
+const nextBtn = document.getElementById("next");
 
 function updateSlide(){
-  slider.style.transform = `translateX(-${index * 100}vw)`;
+  slides.forEach(slide => slide.classList.remove("active"));
+  slides[current].classList.add("active");
+
+  prevBtn.disabled = current === 0;
+  nextBtn.disabled = current === slides.length - 1;
 }
 
-function next(){
-  if(index < slides.length - 1){
-    index++;
+nextBtn.addEventListener("click", () => {
+  if(current < slides.length - 1){
+    current++;
     updateSlide();
   }
-}
+});
 
-function prev(){
-  if(index > 0){
-    index--;
+prevBtn.addEventListener("click", () => {
+  if(current > 0){
+    current--;
     updateSlide();
   }
-}
+});
+
+updateSlide();
 </script>
 
 </body>
